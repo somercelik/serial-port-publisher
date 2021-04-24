@@ -1,5 +1,7 @@
 const SerialPort = require('serialport')
-const prompt = require('prompt-sync')({ sigint: true });
+const prompt = require('prompt-sync')({
+    sigint: true
+});
 const fs = require('fs');
 const requireDir = require('require-dir');
 var configs = requireDir('./config');
@@ -23,8 +25,6 @@ const Regex = SerialPort.parsers.Regex;
 
 const endpointPath = '/indicatorService';
 const httpPort = 8080;
-
-
 //Kullanıcı uygulamayı init ediyor.
 console.log(listMethods(Object.keys(configs)));
 let selectedProfile = configs[Object.keys(configs)[prompt('Profil seçiniz:') - 1]];
@@ -62,16 +62,15 @@ function initServer() {
 }
 
 function writeStringToFile(textToWrite, fileName) {
-    let jsonStr = JSON.stringify(
-        {
-            data: textToWrite,
-            timestamp: new Date()
-        }
-    );
+    let jsonStr = JSON.stringify({
+        data: textToWrite,
+        timestamp: new Date()
+    });
     fs.writeFile(__dirname + "/" + fileName, jsonStr, function (err) {
         if (err) return console.log(err);
     });
 };
+
 function listMethods(methodArray) {
     let methodsStr = '';
 
@@ -80,6 +79,7 @@ function listMethods(methodArray) {
     });
     return methodsStr;
 };
+
 function setParser(selectedMethod, options) {
     let returnMethod;
     switch (selectedMethod) {
@@ -96,7 +96,9 @@ function setParser(selectedMethod, options) {
             returnMethod = new Readline(options);
             break;
         case 'Ready':
-            returnMethod = new Ready({ delimiter: 'READY' });
+            returnMethod = new Ready({
+                delimiter: 'READY'
+            });
             break;
         case 'Regex':
             returnMethod = new Regex();
