@@ -1,0 +1,26 @@
+{
+  "name": "serial-rest-api",
+  "version": "1.0.0",
+  "description": "Reads RS232 port and publishes the data through REST.",
+  "main": "serial-server.js",
+  "dependencies": {
+    "serialport": "^9.0.7"
+  },
+  "devDependencies": {
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "prompt-sync": "^4.2.0",
+    "require-dir": "^1.2.0",
+    "ip": "^1.1.5"
+  },
+  "scripts": {
+    "test": "node index.js",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "rs232",
+    "rest"
+  ],
+  "author": "Soner Çelik",
+  "license": "ISC"
+}

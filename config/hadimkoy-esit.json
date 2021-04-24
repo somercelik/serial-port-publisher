@@ -1,0 +1,16 @@
+{
+    "Organization":"Hadımköy",
+    "Brand": "Esit",
+    "Mode": "ByteLength",
+    "portOptions": {
+        "baudRate": 9600,
+        "dataBits": 8,
+        "stopBits": 1
+    },
+    "CommunicationPort": "COM5",
+    "options": {
+        "regex": null,
+        "length": 10
+    },
+    "description":"TAMAMLANDI"
+}
