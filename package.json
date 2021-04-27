@@ -7,6 +7,12 @@
     "serialport": "^9.0.7"
   },
   "devDependencies": {
+    "@serialport/parser-byte-length": "9.0.7",
+    "@serialport/parser-cctalk": "9.0.7",
+    "@serialport/parser-delimiter": "9.0.7",
+    "@serialport/parser-readline": "9.0.7",
+    "@serialport/parser-ready": "9.0.7",
+    "@serialport/parser-regex": "9.0.7",
     "express": "^4.17.1",
     "fs": "0.0.1-security",
     "ip": "^1.1.5",
