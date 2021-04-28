@@ -4,10 +4,8 @@
   "description": "Reads RS232 port and publishes the data through REST.",
   "main": "serial-server.js",
   "dependencies": {
-    "serialport": "^9.0.7"
-  },
-  "devDependencies": {
-    "@serialport/parser-byte-length": "9.0.7",
+    "serialport": "^9.0.7",
+	"@serialport/parser-byte-length": "9.0.7",
     "@serialport/parser-cctalk": "9.0.7",
     "@serialport/parser-delimiter": "9.0.7",
     "@serialport/parser-readline": "9.0.7",
